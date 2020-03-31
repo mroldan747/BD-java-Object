@@ -44,15 +44,11 @@ public class Training {
         return languages;
     }
 
-<<<<<<< HEAD
     public void setStudents(List<Student> students) {
         this.students = students;
     }
 
-    public void addStudent(Student student){
-=======
     public void addStudent(Student student) {
->>>>>>> 9e5444f6aa0f53eb3d2c92c17e29a9a1291f46d3
         this.students.add(student);
     }
 
