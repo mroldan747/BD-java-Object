@@ -1,3 +1,9 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.io.IOException;
 
 public class wild {
     
@@ -9,6 +15,23 @@ public class wild {
         // Create Students 
         Student one = new Student("One", "Roldan");
         Student two = new Student("Two", "Roldan");
+
+        //Students from csv file
+        String row = "";
+        String csvFile = "students.csv";
+        List<Student> students = new ArrayList<>();
+        try (BufferedReader csvReader = new BufferedReader(new FileReader(csvFile))) {
+            while ((row = csvReader.readLine()) != null) {
+                String[] data = row.split(",");
+                students.add(new Student(data[0], data[1]));
+            }
+            csvReader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        students.add(one);
+        students.add(two);
+       
 
         // Create Language 
         Language java = new Language("java");
@@ -31,17 +54,21 @@ public class wild {
         Training javaT = new Training("Java Training", Coco);
         Training pythonT = new Training("Python Training", Monty);
         javaT.langAlloc(java);
-        javaT.addStudent(one);
-        javaT.addStudent(two); 
+        javaT.setStudents(students);
         pythonT.langAlloc(python);
+
 
         wcs.addTraining(javaT);
         wcs.addTraining(pythonT);
-
+        //Trainings in School
         System.out.println("The School " + wcs.getName() + " has " + wcs.allTraining().size() + " trainings:");
         for (String trainingN : wcs.allTraining()){
             System.out.println(trainingN);
         }
+
+        //Students in training
+        System.out.println("The " + javaT.getName() + " has " + javaT.getStudents().size() + " students");
+        System.out.println("The " + pythonT.getName() + " has " + pythonT.getStudents().size() + " students");
 
         // Check good training
         if (javaT.isGoodTraining()) {
@@ -56,7 +83,8 @@ public class wild {
             System.out.println("-" + quest.getTitle());
         }
 
-
+       
+        
         
     }
 }
