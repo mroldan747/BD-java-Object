@@ -16,28 +16,7 @@ public class Wild {
         Student one = new Student("One", "Roldan");
         Student two = new Student("Two", "Roldan");
 
-<<<<<<< HEAD:wild.java
-        //Students from csv file
-        String row = "";
-        String csvFile = "students.csv";
-        List<Student> students = new ArrayList<>();
-        try (BufferedReader csvReader = new BufferedReader(new FileReader(csvFile))) {
-            while ((row = csvReader.readLine()) != null) {
-                String[] data = row.split(",");
-                students.add(new Student(data[0], data[1]));
-            }
-            csvReader.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        students.add(one);
-        students.add(two);
-       
-
-        // Create Language 
-=======
         // Create Language
->>>>>>> 9e5444f6aa0f53eb3d2c92c17e29a9a1291f46d3:Wild.java
         Language java = new Language("java");
         Language python = new Language("python");
 
@@ -57,12 +36,8 @@ public class Wild {
         Training javaT = new Training("Java Training", coco);
         Training pythonT = new Training("Python Training", monty);
         javaT.langAlloc(java);
-<<<<<<< HEAD:wild.java
-        javaT.setStudents(students);
-=======
         javaT.addStudent(one);
         javaT.addStudent(two);
->>>>>>> 9e5444f6aa0f53eb3d2c92c17e29a9a1291f46d3:Wild.java
         pythonT.langAlloc(python);
 
 
@@ -91,11 +66,5 @@ public class Wild {
             System.out.println("-" + quest.getTitle());
         }
 
-<<<<<<< HEAD:wild.java
-       
-        
-        
-=======
->>>>>>> 9e5444f6aa0f53eb3d2c92c17e29a9a1291f46d3:Wild.java
     }
 }
