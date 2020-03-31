@@ -1,11 +1,10 @@
-import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class Language {
 
     private int id;
-    private static final AtomicInteger count = new AtomicInteger(); 
-    private String name; 
+    private static final AtomicInteger count = new AtomicInteger();
+    private String name;
 
     public Language(String name) {
         this.name = name;

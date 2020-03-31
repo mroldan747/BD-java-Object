@@ -1,16 +1,14 @@
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.ArrayList;
-import java.util.List;
 
 public class Quest {
-    
+
     private String title;
     private String description;
     private static final AtomicInteger count = new AtomicInteger();
     private int id;
     private Language language;
 
-    public Quest (String title, String description, Language language){
+    public Quest(String title, String description, Language language) {
         this.title = title;
         this.description = description;
         this.id = count.getAndIncrement();
