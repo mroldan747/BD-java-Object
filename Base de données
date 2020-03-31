@@ -1,0 +1,13 @@
+## Base de données
+Faire le MCD suivant :
+* Une école `School` a un identifiant unique, un nom, une adresse et une liste des formations.
+* Une formation `Training` a un identifiant unique, un intitulé, une liste de langages, un formateur et une liste d'étudiant.
+* Un formateur `Instructor` a un identifiant unique, un prénom, un nom et une liste de langages préférés.
+* Un langage `Language` a un identifiant unique, un nom et une liste de quêtes.
+* Chaque quête `Quest` a un identifiant unique et un titre, ainsi qu'une description.
+* Un étudiant `Student` a un identifiant unique, un prénom, un nom et une liste de quêtes en cours.
+## Java :
+Une fois la modélisation terminée, créer toutes les classes (attributs, constructeurs, accesseurs, mutateurs) et trouver s'il est possible de faire de l'héritage.
+* Dans la classe `School`, créer une méthode `allTrainings` qui retourne le nom de toutes ses formations.
+* Dans la classe `Training`, créer une méthode `isGoodTraining` que retourne vrai si le formateur enseigne un de ces langages farovis.
+* Dans la classe `Training`, créer une méthode `currentQuests` qui retourne les quêtes en train d'être réalisées par les étudiants.
