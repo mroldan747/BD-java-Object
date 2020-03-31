@@ -1,27 +1,27 @@
 public abstract class Person {
-    
-    private String name;
+
+    private String firstName;
     private String lastName;
 
-    public Person(String name, String lastName){
-        this.name = name;
+    public Person(String name, String lastName) {
+        this.firstName = name;
         this.lastName = lastName;
     }
 
-    // GETTERS 
+    // GETTERS
     public String getLastName() {
         return lastName;
     }
 
-    public String getName() {
-        return name;
+    public String getFirstName() {
+        return firstName;
     }
 
-    //SETTERS
-    public void setName(String name) {
-        this.name = name;
+    // SETTERS
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
-    
+
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
